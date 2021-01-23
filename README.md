@@ -1,6 +1,6 @@
-# gif.ts
+# (WIP) gif.ts
 
-> Project Status: 🚨 Alpha changes expexted
+> Note: :warning: This project is early WIP! currently the focus is to make it stable and feature complete.
 
 Turn videos into gifs.
 
