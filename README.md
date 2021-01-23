@@ -1,5 +1,7 @@
 # gif.ts
 
+> Project Status: 🚨 Alpha changes expexted
+
 Turn videos into gifs.
 
 ## Installation
@@ -25,6 +27,12 @@ const opts = {
 };
 
 gif("https://www.w3schools.com/html/mov_bbb.mp4", "./out.gif", opts);
+```
+
+or using the cli
+
+```bash
+gif -w 480 -t 350 input.np4 output.mp4
 ```
 
 ## Options
