@@ -27,5 +27,5 @@ jobs:
       - name: Cache Dependencies
         run: deno cache ./deps/mod.ts
 
-      - name: Run Tests
-        run: deno test -A --unstable
+#       - name: Run Tests
+#         run: deno test -A --unstable
