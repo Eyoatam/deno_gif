@@ -29,8 +29,8 @@ gif("https://www.w3schools.com/html/mov_bbb.mp4", "./out.gif", opts);
 
 ## Options
 
-- `width` max width [500]
-- `height` max height [none]
+- `width` type number
+- `height` type number
 
 # License
 
