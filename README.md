@@ -44,6 +44,12 @@ gif -w 480 -t 350 input.np4 output.mp4
 - `width` type number
 - `height` type number
 
+## Credits
+
+This project is based on: 
+
+- Benjamin Fischer's [deno_fast_forward](https://github.com/c4spar/deno-fast-forward) which is a wrapper for the [FFmpeg](https://github.com/ffmpeg/ffmpeg) library which is used for actually encoding into gifs
+
 # License
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)
