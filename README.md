@@ -1,5 +1,9 @@
 # (WIP) gif.ts
 
+![CI](https://github.com/Eyoatam/gif.ts/workflows/ci/badge.svg)
+![](https://img.shields.io/github/v/release/Eyoatam/gif.ts?logo=github)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 > Note: :warning: This project is early WIP! currently the focus is to make it stable and feature complete.
 
 Turn videos into gifs.
