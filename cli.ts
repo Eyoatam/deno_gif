@@ -10,7 +10,7 @@ interface Options {
 
 await new commandTs.Command()
 	.name("gif [inputfile] [outputfile]")
-	.version("0.2.1")
+	.version("0.2.2")
 	.description("A command line tool for creating gifs")
 	.option("-w, --width <width:number>", "max width [500]")
 	.option("-l, --height <height:number>", "max height [none]")
