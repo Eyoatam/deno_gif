@@ -32,22 +32,3 @@ jobs:
 
       - name: Lint files
         run: deno lint --unstable
-  generate-changelog:
-    runs-on: ${{ matrix.os }} # runs a test on Ubuntu, Windows and macOS
-
-    strategy:
-      matrix:
-        deno: ["v1.x", "nightly"]
-        os: [macOS-latest, windows-latest, ubuntu-latest]
-
-    steps:
-      - name: Setup repo
-        uses: actions/checkout@v2
-
-      - name: Setup Deno
-        uses: denolib/setup-deno@v2.3.0
-        with:
-          deno-version: ${{ matrix.deno }} # tests across multiple Deno versions
-
-      - name: Generate Changelog
-        run: git log > CHANGELOG.md
