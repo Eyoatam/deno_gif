@@ -5,7 +5,8 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 
-> Note: :warning: This project is early WIP! currently the focus is to make it stable and feature complete.
+> Note: :warning: This project is early WIP! currently the focus is to make it
+> stable and feature complete.
 
 Turn videos into gifs.
 
@@ -27,8 +28,8 @@ brew install ffmpeg
 import { gif } from "https://deno.land/x/deno_gif@0.2/mod.ts";
 
 const opts = {
-	width: 480,
-	height: 380,
+  width: 480,
+  height: 380,
 };
 
 gif("https://www.w3schools.com/html/mov_bbb.mp4", "./out.gif", opts);
