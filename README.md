@@ -5,9 +5,6 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 
-> Note: :warning: This project is early WIP! currently the focus is to make it
-> stable and feature complete.
-> ![](https://img.shields.io/badge/deno-^1.6.0-informational?logo=deno")
 > Note: :warning: This project is early WIP! currently the focus is to make it stable and feature complete.
 
 Turn videos into gifs.
