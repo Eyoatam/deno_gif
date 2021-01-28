@@ -13,7 +13,7 @@ Turn videos into gifs.
 ## Installation
 
 ```bash
-deno install --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@0.2/cli.ts
+deno install --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@0.2.6/cli.ts
 ```
 
 This module Requires `ffmpeg`:
@@ -25,7 +25,7 @@ brew install ffmpeg
 ## Example
 
 ```ts
-import { gif } from "https://deno.land/x/deno_gif@0.2/mod.ts";
+import { gif } from "https://deno.land/x/deno_gif@0.2.6/mod.ts";
 
 const opts = {
   width: 480,

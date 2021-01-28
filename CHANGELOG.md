@@ -1,3 +1,15 @@
+commit 2410dffe31109ecac953eafcab9c7646ec33f4f4
+Author: Eyoatam <eyoatamtamirat7@gmail.com>
+Date:   Thu Jan 28 19:12:14 2021 +0300
+
+    fix(cli): fix duplicated cli output
+
+commit 7e0f924a305ae56e16a1fc10b333f3053dfe4577
+Author: Eyoatam <eyoatamtamirat7@gmail.com>
+Date:   Wed Jan 27 18:57:08 2021 +0300
+
+    chore(changelog): added changelog.md
+
 commit 326c605528fdcaa1fb595a239256c171cf906d1e
 Author: Eyoatam <eyoatamtamirat7@gmail.com>
 Date:   Wed Jan 27 18:53:42 2021 +0300
