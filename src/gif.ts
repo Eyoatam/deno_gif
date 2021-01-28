@@ -21,9 +21,9 @@ export async function gif(input: string, output: string, options: Options) {
     throw error;
   }
 
-  /**
-	 * @todo make output size and time options available
-	 */
+/**
+ * @todo make output size and time options available
+ */
 
   // convert to gif
   const encoder = await ffmpegTs.ffmpeg(input);
