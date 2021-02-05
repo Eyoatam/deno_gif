@@ -1,3 +1,28 @@
+commit 10ef85f76e5aaddc78464b5fd586c93a4d82bc92 Author: Eyoatam
+<eyoatamtamirat7@gmail.com> Date: Fri Feb 5 20:51:01 2021 +0300
+
+    Bump deno_std from 0.84.0 to 0.86.0
+
+commit a6b0ba4f0573fa145c01772796f6d8a1e513bd26 Author: Eyoatam
+<eyoatamtamirat7@gmail.com> Date: Fri Feb 5 20:32:00 2021 +0300
+
+    chore(readme): update typo in readme
+
+commit 07eec73eb62bb152c7ba25ffe38258c32bce3215 Author: Eyoatam
+<eyoatamtamirat7@gmail.com> Date: Fri Feb 5 20:28:54 2021 +0300
+
+    refractor: refractor input and output file checker
+
+commit c9ff9ed2a84f0f4822c75799a5074dafea578273 Author: Eyoatam
+<eyoatamtamirat7@gmail.com> Date: Fri Feb 5 20:25:18 2021 +0300
+
+    fix typo in readme
+
+commit 892bdb8d420af69001fdbb87960f70fc905930bd Author: Eyoatam
+<eyoatamtamirat7@gmail.com> Date: Fri Feb 5 20:23:10 2021 +0300
+
+    fix(types): fix import to types.ts
+
 commit 4e898b8aee6877325d1ee361346554151eae7dd4 Author: Eyoatam
 <eyoatamtamirat7@gmail.com> Date: Thu Jan 28 19:14:40 2021 +0300
 
