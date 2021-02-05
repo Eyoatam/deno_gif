@@ -6,9 +6,7 @@
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 
 > I made this library to practice using deno and creating deno modules <br>
-> but you can use it to convert video files to gifs
-
-Turn videos into gifs.
+> but it can successfully convert videos to gifs
 
 ## Installation
 
