@@ -1,11 +1,11 @@
-# (WIP) gif.ts
+# (WIP) Gif.ts
 
 ![CI](https://github.com/Eyoatam/gif.ts/workflows/ci/badge.svg)
 ![](https://img.shields.io/github/v/release/Eyoatam/gif.ts?logo=github)
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 
-> I made this framework to practice using deno and creating deno modules
+> I made this library to practice using deno and creating deno modules <br>
 > but you can use it to convert video files to gifs
 
 Turn videos into gifs.
