@@ -1,4 +1,5 @@
 import { colorsTs, ffmpegTs } from "../deps/mod.ts";
+import { EventProgress, Options } from "../types/types.ts";
 
 /**
  * convert `input` file to output `gif` with the given `options`
@@ -21,9 +22,9 @@ export async function gif(input: string, output: string, options: Options) {
     throw error;
   }
 
-/**
- * @todo make output size and time options available
- */
+  /**
+	 * @todo make output size and time options available
+	 */
 
   // convert to gif
   const encoder = await ffmpegTs.ffmpeg(input);

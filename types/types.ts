@@ -1,9 +1,9 @@
-interface Options {
+export interface Options {
   width: number;
   height: number;
 }
 
-interface EventProgress {
+export interface EventProgress {
   done: boolean;
   outTimeMs: number;
   frame: number;

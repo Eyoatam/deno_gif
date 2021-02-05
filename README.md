@@ -5,8 +5,8 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 
-> Note: :warning: This project is early WIP! currently the focus is to make it
-> stable and feature complete.
+> I made this framework to practice using deno and creating deno modules
+> but you can use it to convert video files to gifs
 
 Turn videos into gifs.
 
@@ -28,8 +28,8 @@ brew install ffmpeg
 import { gif } from "https://deno.land/x/deno_gif@0.2.6/mod.ts";
 
 const opts = {
-  width: 480,
-  height: 380,
+	width: 480,
+	height: 380,
 };
 
 gif("https://www.w3schools.com/html/mov_bbb.mp4", "./out.gif", opts);
@@ -45,15 +45,6 @@ gif -w 480 -t 350 https://www.w3schools.com/html/mov_bbb.mp4 output.mp4
 
 - `width` type number
 - `height` type number
-
-## Credits
-
-This project is based on:
-
-- Benjamin Fischer's
-  [deno_fast_forward](https://github.com/c4spar/deno-fast-forward) which is a
-  wrapper for the [FFmpeg](https://github.com/ffmpeg/ffmpeg) library which is
-  used for actually encoding into gifs
 
 # License
 
