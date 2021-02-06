@@ -1,3 +1,7 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "denoland.vscode-deno"]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "denoland.vscode-deno",
+    "editorconfig.editorconfig"
+  ]
 }

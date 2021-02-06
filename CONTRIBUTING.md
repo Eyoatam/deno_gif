@@ -1,6 +1,8 @@
 # Contributing Guide
 
-Hi! I'm really excited that you are interested in contributing to Gif.ts. Before submitting your contribution, please make sure to take a moment and read through the following guidelines:
+Hi! I'm really excited that you are interested in contributing to Gif.ts. Before
+submitting your contribution, please make sure to take a moment and read through
+the following guidelines:
 
 - [Code of Conduct](https://github.com/Eyoatam/Christmas-bot-api/blob/master/CODE_OF_CONDUCT.md)
 
