@@ -26,8 +26,8 @@ brew install ffmpeg
 import { gif } from "https://deno.land/x/deno_gif@0.2.6/mod.ts";
 
 const opts = {
-  width: 480,
-  height: 380,
+	width: 480,
+	height: 380,
 };
 
 gif("https://www.w3schools.com/html/mov_bbb.mp4", "./out.gif", opts);
