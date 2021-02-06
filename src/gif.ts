@@ -47,7 +47,7 @@ function handleProgress(event: EncodingProgress) {
   if (!event.fps && !event.frame) {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `time: ${event.outTimeMs}ms speed: ${event.speed}x`
+        `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
     );
   }
   if (event.done) {
@@ -55,7 +55,7 @@ function handleProgress(event: EncodingProgress) {
   } else {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
+        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
     );
   }
 }
