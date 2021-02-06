@@ -3,7 +3,7 @@ export interface Options {
   height: number;
 }
 
-export interface EventProgress {
+export interface EncodingProgress {
   done: boolean;
   outTimeMs: number;
   frame: number;

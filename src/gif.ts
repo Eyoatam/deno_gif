@@ -1,5 +1,5 @@
 import { colorsTs, ffmpegTs } from "../deps/mod.ts";
-import { EventProgress, Options } from "../types/types.ts";
+import { EncodingProgress, Options } from "../types/types.ts";
 
 /**
  * convert `input` file to output `gif` with the given `options`
@@ -12,8 +12,8 @@ export async function gif(input: string, output: string, options: Options) {
   checkInputAndOutput(input, output);
 
   /**
-	 * @todo make output size and time options available
-	 */
+   * @todo make output size and time options available
+   */
 
   // convert to gif
   const encoder = await ffmpegTs.ffmpeg(input);
@@ -40,14 +40,14 @@ function checkInputAndOutput(input: string, output: string) {
   }
 }
 
-function handleProgress(event: EventProgress) {
+function handleProgress(event: EncodingProgress) {
   if (!event.frame && !event.outTimeMs && !event.fps && !event.speed) {
     console.log(colorsTs.green("[ffmpeg]: ") + `progress ${event.progress}`);
   }
   if (!event.fps && !event.frame) {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+        `time: ${event.outTimeMs}ms speed: ${event.speed}x`
     );
   }
   if (event.done) {
@@ -55,7 +55,7 @@ function handleProgress(event: EventProgress) {
   } else {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
     );
   }
 }
