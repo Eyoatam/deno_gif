@@ -5,8 +5,8 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 
-> I made this library to practice using deno and creating deno modules <br> but
-> it can successfully convert videos to gifs
+> I made this library to practice using deno and creating deno modules <br>
+> but it can successfully convert videos to gifs
 
 ## Installation
 
