@@ -24,20 +24,20 @@ brew install ffmpeg
 ## Example
 
 ```ts
-import { gif } from "https://deno.land/x/deno_gif@0.3.0/mod.ts";
+import { gif } from "https://deno.land/x/deno_gif@0.3.2/mod.ts";
 
-const opts = {
+const options = {
   width: 480,
   height: 380,
 };
 
-gif("https://www.w3schools.com/html/mov_bbb.mp4", "./out.gif", opts);
+gif("https://www.w3schools.com/html/mov_bbb.mp4", "output", options);
 ```
 
 or using the cli
 
 ```bash
-gif -w 480 -t 350 https://www.w3schools.com/html/mov_bbb.mp4 output.mp4
+gif -w 480 -t 350 https://www.w3schools.com/html/mov_bbb.mp4 output
 ```
 
 ## Options
