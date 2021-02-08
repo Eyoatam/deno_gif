@@ -8,15 +8,15 @@ import { EncodingProgress, Options } from "../types/types.ts";
  * @param width @default 480
  * @param height @default 380
  */
-export async function gif(input: string, output: string, options: Options) {
+export function gif(input: string, output: string, options: Options) {
   // check if input and output files exist
   checkForInputAndOutput(input, output);
 
-  // validate output file
-  validateOutput(output);
+  // validate input file
+  validateInput(output);
 
   // convert to gif
-  const encoder = await ffmpegTs.ffmpeg(input);
+  const encoder = ffmpegTs.ffmpeg(input);
 
   encoder
     .audioBitrate("192k")
@@ -28,7 +28,7 @@ export async function gif(input: string, output: string, options: Options) {
     .encode();
 }
 
-function validateOutput(output: string) {
+function validateInput(output: string) {
   const splitOutput: Array<string> = output.split("");
 
   if (splitOutput[splitOutput.length - 4] === ".") {
