@@ -12,8 +12,8 @@ export function gif(input: string, output: string, options: Options) {
   // check if input and output files exist
   checkForInputAndOutput(input, output);
 
-  // validate input file
-  validateInput(output);
+  // validate output file
+  validateOutput(output);
 
   // convert to gif
   const encoder = ffmpegTs.ffmpeg(input);
@@ -28,7 +28,7 @@ export function gif(input: string, output: string, options: Options) {
     .encode();
 }
 
-function validateInput(output: string) {
+function validateOutput(output: string) {
   const splitOutput: Array<string> = output.split("");
 
   if (splitOutput[splitOutput.length - 4] === ".") {
