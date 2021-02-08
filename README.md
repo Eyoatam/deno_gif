@@ -45,6 +45,10 @@ gif -w 480 -t 350 https://www.w3schools.com/html/mov_bbb.mp4 output.mp4
 - `width` type number
 - `height` type number
 
+## Show Your Support
+
+Give a 🌟 if you like this project!
+
 # License
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)

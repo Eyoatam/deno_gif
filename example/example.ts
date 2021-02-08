@@ -5,4 +5,4 @@ const options = {
   height: 380,
 };
 
-gif("https://www.w3schools.com/html/mov_bbb.mp4", "./output.gif", options);
+gif("output.gif", "out.webm", options);
