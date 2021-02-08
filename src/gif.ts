@@ -8,7 +8,7 @@ import { EncodingProgress, Options } from "../types/types.ts";
  * @param width @default 480
  * @param height @default 380
  */
-export async function gif(input: string, output: string, options: Options) {
+export function gif(input: string, output: string, options: Options) {
   // check if input and output files exist
   checkForInputAndOutput(input, output);
 
@@ -16,7 +16,7 @@ export async function gif(input: string, output: string, options: Options) {
   validateOutput(output);
 
   // convert to gif
-  const encoder = await ffmpegTs.ffmpeg(input);
+  const encoder = ffmpegTs.ffmpeg(input);
 
   encoder
     .audioBitrate("192k")
