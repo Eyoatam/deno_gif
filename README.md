@@ -6,8 +6,7 @@
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 ![](https://img.shields.io/github/stars/eyoatam/Gif.ts?style=social)
 
-> I made this library to practice using deno and creating deno modules <br> but
-> it can successfully convert videos to gifs
+> convert your videos to gifs
 
 ## Installation
 
@@ -23,8 +22,10 @@ brew install ffmpeg
 
 ## Example
 
+> Example with options
+
 ```ts
-import { gif } from "https://deno.land/x/deno_gif@0.3.2/mod.ts";
+import { gif } from "https://deno.land/x/deno_gif@0.3.3/mod.ts";
 
 const options = {
   width: 480,
@@ -32,6 +33,14 @@ const options = {
 };
 
 gif("https://www.w3schools.com/html/mov_bbb.mp4", "output", options);
+```
+
+> Example without options
+
+```ts
+import { gif } from "https://deno.land/x/deno_gif@0.3.3/mod.ts";
+
+gif("https://www.w3schools.com/html/mov_bbb.mp4", "output");
 ```
 
 or using the cli

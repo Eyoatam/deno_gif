@@ -8,7 +8,7 @@ import { EncodingProgress, Options } from "../types/types.ts";
  * @param width @default 480
  * @param height @default 380
  */
-export function gif(input: string, output: string, options: Options) {
+export function gif(input: string, output: string, options?: Options) {
   // check if input and output files exist
   checkForInputAndOutput(input, output);
 
@@ -22,37 +22,23 @@ export function gif(input: string, output: string, options: Options) {
     .audioBitrate("192k")
     .videoBitrate("1M")
     .addEventListener("progress", handleProgress)
-    .width(options.width || 480)
-    .height(options.height || 380)
-    .output(output + ".gif")
+    .width(options ? options?.width : 480)
+    .height(options ? options?.height : 380)
+    .output("./" + output + ".gif")
     .encode();
 }
 
 function validateOutput(output: string) {
   const splitOutput: Array<string> = output.split("");
-
-  if (splitOutput[splitOutput.length - 4] === ".") {
-    const character = splitOutput[splitOutput.length - 4];
-    const index = splitOutput.length - 4;
+  if (splitOutput.includes(".")) {
     const error = new Error(
-      `unexpected character ${character} at index ${index} output file name must not contain a '.' or extension like '.mp4', '.gif'`
+      `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`
     );
     throw error;
   }
-
-  if (splitOutput[splitOutput.length - 5] === ".") {
-    const character = splitOutput[splitOutput.length - 5];
-    const index = splitOutput.length - 5;
+  if (splitOutput.includes("/")) {
     const error = new Error(
-      `unexpected character ${character} at index ${index} output file name must not contain a '.' or extension like '.mp4', '.gif'`
-    );
-    throw error;
-  }
-
-  if (splitOutput[0] === ".") {
-    const character = splitOutput[0];
-    const error = new Error(
-      `unexpected character ${character} at index 0 output file name must not contain a '.' or extension like '.mp4', '.gif'`
+      `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`
     );
     throw error;
   }
