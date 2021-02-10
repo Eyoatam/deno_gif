@@ -1,3 +1,6 @@
 .DS_Store
 .env
-output.gif
+*.gif
+*.avi
+*.mp3
+*.webm
