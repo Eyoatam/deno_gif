@@ -2,7 +2,7 @@ import { colorsTs, ffmpegTs } from "../deps/mod.ts";
 import { EncodingProgress, Options } from "../types/types.ts";
 
 /**
- * convert `input` video files to `gifs` with the given `options`
+ * convert `input` video files to `.gif` with the given `options`
  * @param input @type string
  * @param output @type string
  * @param width @default 480
@@ -25,6 +25,110 @@ export function gif(input: string, output: string, options?: Options) {
     .width(options ? options?.width : 480)
     .height(options ? options?.height : 380)
     .output("./" + output + ".gif")
+    .encode();
+}
+
+/**
+ * convert `input` video files to `.mp4` with the given `options`
+ * @param input @type string
+ * @param output @type string
+ * @param width @default 480
+ * @param height @default 380
+ */
+export function mp4(input: string, output: string, options?: Options) {
+  // check if input and output files exist
+  checkForInputAndOutput(input, output);
+
+  // validate output file
+  validateOutput(output);
+
+  // convert to mp4
+  const encoder = ffmpegTs.ffmpeg(input);
+
+  encoder
+    .audioBitrate("192k")
+    .videoBitrate("1M")
+    .addEventListener("progress", handleProgress)
+    .width(options ? options?.width : 480)
+    .height(options ? options?.height : 380)
+    .output("./" + output + ".mp4")
+    .encode();
+}
+
+/**
+ * convert `input` video files to `.mp4` with the given `options`
+ * @param input @type string
+ * @param output @type string
+ */
+export function mp3(input: string, output: string) {
+  // check if input and output files exist
+  checkForInputAndOutput(input, output);
+
+  // validate output file
+  validateOutput(output);
+
+  // convert to mp3
+  const encoder = ffmpegTs.ffmpeg(input);
+
+  encoder
+    .audioBitrate("192k")
+    .videoBitrate("1M")
+    .addEventListener("progress", handleProgress)
+    .output("./" + output + ".mp3")
+    .encode();
+}
+
+/**
+ * convert `input` video files to `.mp4` with the given `options`
+ * @param input @type string
+ * @param output @type string
+ * @param width @default 480
+ * @param height @default 380
+ */
+export function avi(input: string, output: string, options?: Options) {
+  // check if input and output files exist
+  checkForInputAndOutput(input, output);
+
+  // validate output file
+  validateOutput(output);
+
+  // convert to avi
+  const encoder = ffmpegTs.ffmpeg(input);
+
+  encoder
+    .audioBitrate("192k")
+    .videoBitrate("1M")
+    .addEventListener("progress", handleProgress)
+    .width(options ? options?.width : 480)
+    .height(options ? options?.height : 380)
+    .output("./" + output + ".avi")
+    .encode();
+}
+
+/**
+ * convert `input` video files to `.mp4` with the given `options`
+ * @param input @type string
+ * @param output @type string
+ * @param width @default 480
+ * @param height @default 380
+ */
+export function webm(input: string, output: string, options?: Options) {
+  // check if input and output files exist
+  checkForInputAndOutput(input, output);
+
+  // validate output file
+  validateOutput(output);
+
+  // convert to avi
+  const encoder = ffmpegTs.ffmpeg(input);
+
+  encoder
+    .audioBitrate("192k")
+    .videoBitrate("1M")
+    .addEventListener("progress", handleProgress)
+    .width(options ? options?.width : 480)
+    .height(options ? options?.height : 380)
+    .output("./" + output + ".webm")
     .encode();
 }
 
