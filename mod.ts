@@ -1,1 +1,1 @@
-export { gif, mp4, mp3, avi, webm } from "./src/gif.ts";
+export { gif, avi, mp3, mp4, webm } from "./src/gif.ts";
