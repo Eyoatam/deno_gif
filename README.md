@@ -176,12 +176,6 @@ webm(
 gif --webm -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4 -o output
 ```
 
-or using the cli
-
-```bash
-gif -w 480 -t 350 https://www.w3schools.com/html/mov_bbb.mp4 output
-```
-
 ## Options
 
 - `width` type number
