@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 ![](https://img.shields.io/github/commit-activity/m/Eyoatam/Gif.ts)
-
+![](https://img.shields.io/github/contributors/Eyoatam/Gif.ts)
 > convert your videos to gifs
 
 ## Installation
