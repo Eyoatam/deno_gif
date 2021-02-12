@@ -51,7 +51,7 @@ jobs:
           echo "$HOME/.deno/bin" >> $GITHUB_PATH
 
       - name: Format
-        run: deno fmt --check
+        run: deno fmt
 
       - name: Lint
         run: deno lint --unstable
