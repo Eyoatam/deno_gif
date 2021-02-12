@@ -2,33 +2,62 @@ name: ci
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }} # runs a test on Ubuntu, Windows and macOS
-
+  setup:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
     strategy:
+      fail-fast: false
       matrix:
-        deno: ["v1.x", "nightly"]
-        os: [macOS-latest, windows-latest, ubuntu-latest]
+        deno: [stable, canary]
+        os: [macOS-latest, ubuntu-latest, windows-2019]
 
     steps:
-      - name: Setup repo
+      - name: Clone repository
         uses: actions/checkout@v2
-
-      - name: Setup Deno
-        uses: denolib/setup-deno@v2.3.0
         with:
-          deno-version: ${{ matrix.deno }} # tests across multiple Deno versions
+          submodules: true
+          persist-credentials: false
 
-      - name: Cache Dependencies
-        run: deno cache ./deps/mod.ts
+      - name: Install Deno (Unix)
+        if: |
+          !startsWith(matrix.os, 'windows')
+        run: |-
+          curl -fsSL https://deno.land/x/install/install.sh | sh
+          echo "$HOME/.deno/bin" >> $GITHUB_PATH
+      - name: Install Deno (Windows)
+        if: startsWith(matrix.os, 'windows')
+        run: |-
+          curl -fsSL https://deno.land/x/install/install.sh | sh
+          echo "$HOME/.deno/bin" >> $env:GITHUB_PATH
 
-      # - name: Run Tests
-      #   run: deno test -A --unstable
+      - name: Upgrade to Deno canary
+        if: matrix.deno == 'canary'
+        run: deno upgrade --canary
 
-      - name: Lint files
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+        with:
+          submodules: false
+          persist-credentials: false
+
+      - name: Install Deno
+        run: |-
+          curl -fsSL https://deno.land/x/install/install.sh | sh
+          echo "$HOME/.deno/bin" >> $GITHUB_PATH
+
+      - name: Upgrade to Deno canary
+        run: deno upgrade --canary
+
+      - name: Format
+        run: deno fmt --check
+
+      - name: Lint
         run: deno lint --unstable
