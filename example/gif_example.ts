@@ -8,5 +8,5 @@ const options = {
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options
+  options,
 );

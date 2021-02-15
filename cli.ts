@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run --allow-net --allow-env --allow-run
 
 import { commandTs } from "./deps/mod.ts";
-import { gif, mp3, webm, avi, mp4 } from "./mod.ts";
+import { avi, gif, mp3, mp4, webm } from "./mod.ts";
 import { CLiOptions } from "./types/types.ts";
 
 const program = new commandTs.Command();

@@ -136,13 +136,13 @@ function validateOutput(output: string) {
   const splitOutput: Array<string> = output.split("");
   if (splitOutput.includes(".")) {
     const error = new Error(
-      `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`
+      `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`,
     );
     throw error;
   }
   if (splitOutput.includes("/")) {
     const error = new Error(
-      `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`
+      `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`,
     );
     throw error;
   }
@@ -167,7 +167,7 @@ function handleProgress(event: EncodingProgress) {
   if (!event.fps && !event.frame) {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `time: ${event.outTimeMs}ms speed: ${event.speed}x`
+        `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
     );
   }
   if (event.done) {
@@ -175,7 +175,7 @@ function handleProgress(event: EncodingProgress) {
   } else {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
+        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
     );
   }
 }
