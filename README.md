@@ -1,10 +1,10 @@
 # (WIP) Gif.ts
 
-![CI](https://github.com/Eyoatam/gif.ts/workflows/ci/badge.svg)
+![ci](https://github.com/Eyoatam/Gif.ts/workflows/ci/badge.svg)
 ![](https://img.shields.io/github/v/release/Eyoatam/gif.ts?logo=github)
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
-![](https://img.shields.io/github/stars/eyoatam/Gif.ts?style=social)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/eyoatam/gif.ts)
 
 > convert your videos to gifs
 
@@ -16,7 +16,7 @@ deno install --allow-read --allow-write --allow-run -f -n gif https://deno.land/
 
 This module Requires `ffmpeg`:
 
-```
+```bash
 brew install ffmpeg
 ```
 
@@ -188,3 +188,6 @@ Give a 🌟 if you like this project!
 # License
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)
+
+# Star History
+[![Stargazers over time](https://starchart.cc/Eyoatam/Gif.ts.svg)](https://starchart.cc/Eyoatam/Gif.ts)
