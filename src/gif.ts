@@ -109,7 +109,7 @@ export function mp4(input: string, output: string, options?: Options) {
 }
 
 /**
- * convert `input` video files to `.mp4` with the given `options`
+ * convert `input` video files to `.mp3` with the given `options`
  * @param input @type string
  * @param output @type string
  */
@@ -132,7 +132,7 @@ export function mp3(input: string, output: string) {
 }
 
 /**
- * convert `input` video files to `.mp4` with the given `options`
+ * convert `input` video files to `.avi` with the given `options`
  * @param input @type string
  * @param output @type string
  * @param width @default 480
@@ -159,7 +159,7 @@ export function avi(input: string, output: string, options?: Options) {
 }
 
 /**
- * convert `input` video files to `.mp4` with the given `options`
+ * convert `input` video files to `.webm` with the given `options`
  * @param input @type string
  * @param output @type string
  * @param width @default 480
