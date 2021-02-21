@@ -25,7 +25,7 @@ brew install ffmpeg
 > Example of converting video to gif with options
 
 ```ts
-import { gif } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { gif } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
   width: 480,
@@ -35,19 +35,19 @@ const options = {
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
 > and without options
 
 ```ts
-import { gif } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { gif } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
@@ -60,11 +60,11 @@ gif -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4 
 > Example of converting video to mp3
 
 ```ts
-import { mp3 } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { mp3 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mp3(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -77,7 +77,7 @@ gif --mp3 -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vide
 > Example of converting video to mp4 with options
 
 ```ts
-import { mp4 } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { mp4 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
   width: 480,
@@ -87,18 +87,18 @@ const options = {
 mp4(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
 > and with out options
 
 ```ts
-import { mp4 } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { mp4 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mp4(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -111,7 +111,7 @@ gif --mp4 -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vide
 > Example of converting video to avi with options
 
 ```ts
-import { avi } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { avi } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
   width: 480,
@@ -121,18 +121,18 @@ const options = {
 avi(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
 > and with out options
 
 ```ts
-import { avi } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { avi } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 avi(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -145,7 +145,7 @@ gif --avi -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vide
 > Example of converting video to webm with options
 
 ```ts
-import { webm } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { webm } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
   width: 480,
@@ -155,18 +155,18 @@ const options = {
 webm(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
 > and with out options
 
 ```ts
-import { webm } from "https://deno.land/x/deno_gif@0.3.5/mod.ts";
+import { webm } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 webm(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
