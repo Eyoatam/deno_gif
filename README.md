@@ -189,6 +189,3 @@ Give a 🌟 if you like this project!
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)
 
-# Star History
-
-[![Stargazers over time](https://starchart.cc/Eyoatam/Gif.ts.svg)](https://starchart.cc/Eyoatam/Gif.ts)
