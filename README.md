@@ -35,7 +35,7 @@ const options = {
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options	
 );
 ```
 
@@ -47,7 +47,6 @@ import { gif } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
 );
 ```
 
