@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/deno-^1.4.0-informational?logo=deno")
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/eyoatam/gif.ts)
 
-> convert your videos to gifs
+> convert your videos to `.gif`, `.mp3`, `.mp4`, `.webm` and `.avi`
 
 ## Installation
 
