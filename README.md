@@ -35,7 +35,7 @@ const options = {
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options	
+  options,
 );
 ```
 
@@ -187,4 +187,3 @@ Give a 🌟 if you like this project!
 # License
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)
-
