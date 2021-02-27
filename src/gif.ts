@@ -1,74 +1,6 @@
-import { colorsTs, ffmpegTs } from "../deps/mod.ts";
-import { EncodingProgress, Options } from "../types/types.ts";
-
-// Handlers
-function validateOutput(output: string) {
-  const splitOutput: Array<string> = output.split("");
-  const splicedOutput: Array<string> = splitOutput.splice(2, output.length - 2);
-  if (splicedOutput[0] === ".") {
-    throw new Error("Invalid path");
-  }
-  if (splicedOutput.includes(".")) {
-    const error = new Error(
-      `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`
-    );
-    throw error;
-  }
-  if (splitOutput[0] === "/") {
-    const error = new Error(
-      `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`
-    );
-    throw error;
-  }
-}
-
-function checkForInputAndOutput(input: string, output: string) {
-  if (!input) {
-    const error = new Error("input file is required");
-    throw error;
-  }
-
-  if (!output) {
-    const error = new Error("output file is required");
-    throw error;
-  }
-}
-
-function handleProgress(event: EncodingProgress) {
-  if (!event.frame && !event.outTimeMs && !event.fps && !event.speed) {
-    console.log(colorsTs.green("[ffmpeg]: ") + `progress ${event.progress}`);
-  }
-  if (!event.fps && !event.frame) {
-    console.log(
-      colorsTs.green("[ffmpeg]: ") +
-        `time: ${event.outTimeMs}ms speed: ${event.speed}x`
-    );
-  }
-  if (event.done) {
-    console.log(`✨Done✨ in ${event.outTimeMs} ms`);
-  } else {
-    console.log(
-      colorsTs.green("[ffmpeg]: ") +
-        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
-    );
-  }
-}
-
-class VideoConverter {
-  constructor() {}
-  convert(input: string, output: string, format: string, options?: Options) {
-    const encoder = ffmpegTs.ffmpeg(input);
-
-    encoder
-      .audioBitrate("192k")
-      .videoBitrate("1M")
-      .addEventListener("progress", handleProgress)
-      .width(options ? options?.width : 480)
-      .height(options ? options?.height : 380)
-      .output("./" + output + "." + format)
-      .encode();
-  }
-}
+import { Options } from "../types/types.ts";
+import Helper from "./utils.ts";
+const Handler = new Helper();
 
 /**
  * convert `input` video files to `gif` with the given `options`
@@ -79,14 +11,13 @@ class VideoConverter {
  */
 export function gif(input: string, output: string, options?: Options) {
   // check if input and output files exist
-  checkForInputAndOutput(input, output);
+  Handler.checkForInputAndOutput(input, output);
 
   // validate output file
-  validateOutput(output);
+  Handler.validateOutput(output);
 
   // convert to gif
-  const converter = new VideoConverter();
-  converter.convert(input, output, "gif", options);
+  Handler.convert(input, output, "gif", options);
 }
 
 /**
@@ -98,14 +29,13 @@ export function gif(input: string, output: string, options?: Options) {
  */
 export function mp4(input: string, output: string, options?: Options) {
   // check if input and output files exist
-  checkForInputAndOutput(input, output);
+  Handler.checkForInputAndOutput(input, output);
 
   // validate output file
-  validateOutput(output);
+  Handler.validateOutput(output);
 
   // convert to mp4
-  const converter = new VideoConverter();
-  converter.convert(input, output, "mp4", options);
+  Handler.convert(input, output, "mp4", options);
 }
 
 /**
@@ -115,14 +45,13 @@ export function mp4(input: string, output: string, options?: Options) {
  */
 export function mp3(input: string, output: string) {
   // check if input and output files exist
-  checkForInputAndOutput(input, output);
+  Handler.checkForInputAndOutput(input, output);
 
   // validate output file
-  validateOutput(output);
+  Handler.validateOutput(output);
 
   // convert to mp3
-  const converter = new VideoConverter();
-  converter.convert(input, output, "mp3");
+  Handler.convert(input, output, "mp3");
 }
 
 /**
@@ -134,14 +63,13 @@ export function mp3(input: string, output: string) {
  */
 export function avi(input: string, output: string, options?: Options) {
   // check if input and output files exist
-  checkForInputAndOutput(input, output);
+  Handler.checkForInputAndOutput(input, output);
 
   // validate output file
-  validateOutput(output);
+  Handler.validateOutput(output);
 
   // convert to avi
-  const converter = new VideoConverter();
-  converter.convert(input, output, "avi", options);
+  Handler.convert(input, output, "avi", options);
 }
 
 /**
@@ -153,12 +81,11 @@ export function avi(input: string, output: string, options?: Options) {
  */
 export function webm(input: string, output: string, options?: Options) {
   // check if input and output files exist
-  checkForInputAndOutput(input, output);
+  Handler.checkForInputAndOutput(input, output);
 
   // validate output file
-  validateOutput(output);
+  Handler.validateOutput(output);
 
   // convert to webm
-  const converter = new VideoConverter();
-  converter.convert(input, output, "webm", options);
+  Handler.convert(input, output, "webm", options);
 }
