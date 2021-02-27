@@ -1,6 +1,6 @@
 # (WIP) Gif.ts
 
-[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/oak/mod.ts)
+[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/deno_gif/mod.ts)
 ![ci](https://github.com/Eyoatam/Gif.ts/workflows/ci/badge.svg)
 
 ![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Fdeno_gif%2Fmod.ts)
