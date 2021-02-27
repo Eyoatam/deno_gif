@@ -30,14 +30,14 @@ brew install ffmpeg
 import { gif } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
-	width: 480,
-	height: 380,
+  width: 480,
+  height: 380,
 };
 
 gif(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output",
-	options
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
+  options,
 );
 ```
 
@@ -47,8 +47,8 @@ gif(
 import { gif } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 gif(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output"
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
 );
 ```
 
@@ -64,8 +64,8 @@ gif -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4 
 import { mp3 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mp3(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output"
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
 );
 ```
 
@@ -81,14 +81,14 @@ gif --mp3 -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vide
 import { mp4 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
-	width: 480,
-	height: 350,
+  width: 480,
+  height: 350,
 };
 
 mp4(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output",
-	options
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
+  options,
 );
 ```
 
@@ -98,8 +98,8 @@ mp4(
 import { mp4 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mp4(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output"
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
 );
 ```
 
@@ -115,14 +115,14 @@ gif --mp4 -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vide
 import { avi } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
-	width: 480,
-	height: 350,
+  width: 480,
+  height: 350,
 };
 
 avi(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output",
-	options
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
+  options,
 );
 ```
 
@@ -132,8 +132,8 @@ avi(
 import { avi } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 avi(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output"
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
 );
 ```
 
@@ -149,14 +149,14 @@ gif --avi -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vide
 import { webm } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 const options = {
-	width: 480,
-	height: 350,
+  width: 480,
+  height: 350,
 };
 
 webm(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output",
-	options
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
+  options,
 );
 ```
 
@@ -166,8 +166,8 @@ webm(
 import { webm } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 webm(
-	"https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-	"output"
+  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
+  "output",
 );
 ```
 
