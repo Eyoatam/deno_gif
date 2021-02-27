@@ -34,7 +34,7 @@ jobs:
         run: |-
           curl -fsSL https://deno.land/x/install/install.sh | sh
           echo "$HOME/.deno/bin" >> $env:GITHUB_PATH
-      - name: Check-Formatting
-        run: deno fmt --check
+      - name: Format
+        run: deno fmt
       - name: Lint
         run: deno lint --unstable
