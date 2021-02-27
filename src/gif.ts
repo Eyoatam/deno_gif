@@ -10,13 +10,13 @@ function validateOutput(output: string) {
   }
   if (splicedOutput.includes(".")) {
     const error = new Error(
-      `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`,
+      `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`
     );
     throw error;
   }
   if (splitOutput[0] === "/") {
     const error = new Error(
-      `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`,
+      `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`
     );
     throw error;
   }
@@ -41,7 +41,7 @@ function handleProgress(event: EncodingProgress) {
   if (!event.fps && !event.frame) {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+        `time: ${event.outTimeMs}ms speed: ${event.speed}x`
     );
   }
   if (event.done) {
@@ -49,13 +49,29 @@ function handleProgress(event: EncodingProgress) {
   } else {
     console.log(
       colorsTs.green("[ffmpeg]: ") +
-        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+        `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
     );
   }
 }
 
+class VideoConverter {
+  constructor() {}
+  convert(input: string, output: string, format: string, options?: Options) {
+    const encoder = ffmpegTs.ffmpeg(input);
+
+    encoder
+      .audioBitrate("192k")
+      .videoBitrate("1M")
+      .addEventListener("progress", handleProgress)
+      .width(options ? options?.width : 480)
+      .height(options ? options?.height : 380)
+      .output("./" + output + "." + format)
+      .encode();
+  }
+}
+
 /**
- * convert `input` video files to `.gif` with the given `options`
+ * convert `input` video files to `gif` with the given `options`
  * @param input @type string
  * @param output @type string
  * @param width @default 480
@@ -69,20 +85,12 @@ export function gif(input: string, output: string, options?: Options) {
   validateOutput(output);
 
   // convert to gif
-  const encoder = ffmpegTs.ffmpeg(input);
-
-  encoder
-    .audioBitrate("192k")
-    .videoBitrate("1M")
-    .addEventListener("progress", handleProgress)
-    .width(options ? options?.width : 480)
-    .height(options ? options?.height : 380)
-    .output("./" + output + ".gif")
-    .encode();
+  const converter = new VideoConverter();
+  converter.convert(input, output, "gif", options);
 }
 
 /**
- * convert `input` video files to `.mp4` with the given `options`
+ * convert `input` video files to `mp4` with the given `options`
  * @param input @type string
  * @param output @type string
  * @param width @default 480
@@ -96,20 +104,12 @@ export function mp4(input: string, output: string, options?: Options) {
   validateOutput(output);
 
   // convert to mp4
-  const encoder = ffmpegTs.ffmpeg(input);
-
-  encoder
-    .audioBitrate("192k")
-    .videoBitrate("1M")
-    .addEventListener("progress", handleProgress)
-    .width(options ? options?.width : 480)
-    .height(options ? options?.height : 380)
-    .output("./" + output + ".mp4")
-    .encode();
+  const converter = new VideoConverter();
+  converter.convert(input, output, "mp4", options);
 }
 
 /**
- * convert `input` video files to `.mp3` with the given `options`
+ * convert `input` video files to `mp3` with the given `options`
  * @param input @type string
  * @param output @type string
  */
@@ -121,18 +121,12 @@ export function mp3(input: string, output: string) {
   validateOutput(output);
 
   // convert to mp3
-  const encoder = ffmpegTs.ffmpeg(input);
-
-  encoder
-    .audioBitrate("192k")
-    .videoBitrate("1M")
-    .addEventListener("progress", handleProgress)
-    .output("./" + output + ".mp3")
-    .encode();
+  const converter = new VideoConverter();
+  converter.convert(input, output, "mp3");
 }
 
 /**
- * convert `input` video files to `.avi` with the given `options`
+ * convert `input` video files to `avi` with the given `options`
  * @param input @type string
  * @param output @type string
  * @param width @default 480
@@ -146,16 +140,8 @@ export function avi(input: string, output: string, options?: Options) {
   validateOutput(output);
 
   // convert to avi
-  const encoder = ffmpegTs.ffmpeg(input);
-
-  encoder
-    .audioBitrate("192k")
-    .videoBitrate("1M")
-    .addEventListener("progress", handleProgress)
-    .width(options ? options?.width : 480)
-    .height(options ? options?.height : 380)
-    .output("./" + output + ".avi")
-    .encode();
+  const converter = new VideoConverter();
+  converter.convert(input, output, "avi", options);
 }
 
 /**
@@ -172,15 +158,7 @@ export function webm(input: string, output: string, options?: Options) {
   // validate output file
   validateOutput(output);
 
-  // convert to avi
-  const encoder = ffmpegTs.ffmpeg(input);
-
-  encoder
-    .audioBitrate("192k")
-    .videoBitrate("1M")
-    .addEventListener("progress", handleProgress)
-    .width(options ? options?.width : 480)
-    .height(options ? options?.height : 380)
-    .output("./" + output + ".webm")
-    .encode();
+  // convert to webm
+  const converter = new VideoConverter();
+  converter.convert(input, output, "webm", options);
 }
