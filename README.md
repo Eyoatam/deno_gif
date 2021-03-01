@@ -1,5 +1,9 @@
 # (WIP) Gif.ts
 
+<img src="https://github.com/Eyoatam/Gif.ts/blob/master/assets/Screenshot.png" align="center">
+
+<!--![Screenshot](https://github.com/Eyoatam/Gif.ts/blob/master/assets/Screenshot.png)-->
+
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/deno_gif/mod.ts)
 ![ci](https://github.com/Eyoatam/Gif.ts/workflows/ci/badge.svg)
 
