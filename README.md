@@ -1,9 +1,5 @@
 # (WIP) Gif.ts
 
-<img src="https://github.com/Eyoatam/Gif.ts/blob/master/assets/Screenshot.png" align="center">
-
-<!--![Screenshot](https://github.com/Eyoatam/Gif.ts/blob/master/assets/Screenshot.png)-->
-
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/deno_gif/mod.ts)
 ![ci](https://github.com/Eyoatam/Gif.ts/workflows/ci/badge.svg)
 
@@ -201,7 +197,8 @@ Examples of good title:
 - fix(cli): fix cli video to gif converter
 - feat(utils): add more utils
 
-For further information you can read the [Contribiting guidelines](https://github.com/Eyoatam/Gif.ts/blob/master/CONTRIBUTING.md)
+For further information you can read the
+[Contribiting guidelines](https://github.com/Eyoatam/Gif.ts/blob/master/CONTRIBUTING.md)
 
 ## Show Your Support
 
