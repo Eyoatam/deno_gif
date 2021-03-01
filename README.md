@@ -182,6 +182,23 @@ gif --webm -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/vid
 - `width` type number
 - `height` type number
 
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b feat/new-feature`
+3. Commit your changes: `git commit -am 'feat(newFeature): add new features'`
+4. Push to the branch: `git push origin feat/new-feature`
+5. Submit a pull request
+
+Give your pr a descriptive title
+
+Examples of good title:
+
+- fix(cli): fix cli video to gif converter
+- feat(utils): add more utils
+
+For further information you can read the [Contribiting guidelines](https://github.com/Eyoatam/Gif.ts/blob/master/CONTRIBUTING.md)
+
 ## Show Your Support
 
 Give a 🌟 if you like this project!
