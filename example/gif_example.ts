@@ -5,8 +5,4 @@ const options = {
   height: 380,
 };
 
-gif(
-  "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
-  options,
-);
+gif("./testdata/video.mp4", "output", options);
