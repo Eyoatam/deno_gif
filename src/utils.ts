@@ -49,7 +49,6 @@ export default class Helper {
       );
     }
   }
-
   /**
    * validates output file name
    * by checking for invalid paths

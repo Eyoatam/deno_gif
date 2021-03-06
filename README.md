@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://github.com/Eyoatam/Gif.ts/blob/master/assets/logo.jpeg">
-</p>  
+</p>
 
 <h1 align="center">(WIP) Gif.ts</h1>
 
