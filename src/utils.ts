@@ -1,9 +1,9 @@
 import { colorsTs, ffmpegTs } from "../deps/mod.ts";
 import { EncodingProgress, Options } from "../types/types.ts";
 
-export default class Helper {
+export class Helper {
   /**
-   * convergs videos to other formats of videos with the given options
+   * converts videos to the given formats with optional `width` and `height` options
    *
    *
    * Options:
@@ -49,6 +49,7 @@ export default class Helper {
       );
     }
   }
+
   /**
    * validates output file name
    * by checking for invalid paths
