@@ -1,5 +1,5 @@
 import { Options } from "../types/types.ts";
-import Helper from "./utils.ts";
+import { Helper } from "./utils.ts";
 const Handler = new Helper();
 
 /**
