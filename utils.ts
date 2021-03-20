@@ -1,3 +1,5 @@
+// deno-lint-ignore-file
+
 class FFmpegBaseParameters {
   #opts;
   constructor(opts1) {
@@ -2342,9 +2344,9 @@ function validateFlags(
   for (const option11 of flags) {
     if (option11.required && !(paramCaseToCamelCase(option11.name) in values)) {
       if (
-        (!option11.conflicts || !option11.conflicts.find((flag) =>
-          !!values[flag]
-        )) && !options20.find((opt) =>
+        (!option11.conflicts ||
+          !option11.conflicts.find((flag) => !!values[flag])) &&
+        !options20.find((opt) =>
           opt.option?.conflicts?.find((flag) => flag === option11.name)
         )
       ) {
@@ -4946,7 +4948,8 @@ class ZshCompletionsGenerator {
       argsCommand += ` \\\n    ${options22.join(" \\\n    ")}`;
     }
     if (
-      command.hasCommands(false) || command.getArguments().filter((arg3) =>
+      command.hasCommands(false) ||
+      command.getArguments().filter((arg3) =>
         command.getCompletion(arg3.action)
       ).length
     ) {
