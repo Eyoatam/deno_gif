@@ -1,4 +1,4 @@
-import { colorsTs, ffmpegTs } from "../deps/mod.ts";
+import { colorsTs, ffmpegTs } from "../deps.ts";
 import { EncodingProgress, Options } from "../types/types.ts";
 
 export class Helper {
