@@ -25,6 +25,13 @@ This module Requires `ffmpeg`:
 brew install ffmpeg
 ```
 
+## Options
+
+| name     | description                      |
+| -------- | -------------------------------- |
+| `width`  | controls the width of the video  |
+| `height` | controls the height of the video |
+
 ## Example
 
 > Example of converting video to gif with options
@@ -179,11 +186,6 @@ webm(
 ```bash
 gif --webm -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4 -o output
 ```
-
-## Options
-
-- `width` type number
-- `height` type number
 
 ## Contributing
 
