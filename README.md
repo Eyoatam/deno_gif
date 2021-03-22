@@ -32,6 +32,17 @@ brew install ffmpeg
 | `width`  | controls the width of the video  |
 | `height` | controls the height of the video |
 
+## Methods
+
+| name   | description                           |
+| ------ | ------------------------------------- |
+| `gif`  | converts videos of any format to gifs |
+| `mp4`  | converts videos of any format to mp4  |
+| `mp3`  | converts videos of any format to mp3  |
+| `avi`  | converts videos of any format to avi  |
+| `webm` | converts videos of any format to webm |
+
+
 ## Example
 
 > Example of converting video to gif with options
@@ -212,3 +223,4 @@ Give a 🌟 if you like this project!
 # License
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)
+
