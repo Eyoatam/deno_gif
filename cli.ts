@@ -1,8 +1,12 @@
 #!/usr/bin/env -S deno run --allow-net --allow-env --allow-run
 
-import { commandTs } from "./deps/mod.ts";
+import { commandTs } from "./deps.ts";
 import { avi, gif, mp3, mp4, webm } from "./mod.ts";
-import { CLiOptions } from "./types/types.ts";
+
+export interface CLiOptions {
+  input: string;
+  output: string;
+}
 
 const program = new commandTs.Command();
 
@@ -40,7 +44,7 @@ program
 })();
 
 // deno-lint-ignore no-explicit-any
-function createGif(): commandTs.IAction<any, any> {
+export function createGif(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -49,7 +53,7 @@ function createGif(): commandTs.IAction<any, any> {
 }
 
 // deno-lint-ignore no-explicit-any
-function createMp3(): commandTs.IAction<any, any> {
+export function createMp3(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -58,7 +62,7 @@ function createMp3(): commandTs.IAction<any, any> {
 }
 
 // deno-lint-ignore no-explicit-any
-function createWebm(): commandTs.IAction<any, any> {
+export function createWebm(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -66,7 +70,7 @@ function createWebm(): commandTs.IAction<any, any> {
   };
 }
 // deno-lint-ignore no-explicit-any
-function createMp4(): commandTs.IAction<any, any> {
+export function createMp4(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -75,7 +79,7 @@ function createMp4(): commandTs.IAction<any, any> {
 }
 
 // deno-lint-ignore no-explicit-any
-function createAvi(): commandTs.IAction<any, any> {
+export function createAvi(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;

@@ -42,7 +42,6 @@ brew install ffmpeg
 | `avi`  | converts videos of any format to avi  |
 | `webm` | converts videos of any format to webm |
 
-
 ## Example
 
 > Example of converting video to gif with options
@@ -223,4 +222,3 @@ Give a 🌟 if you like this project!
 # License
 
 [MIT](https://github.com/Eyoatam/gif.ts/blob/master/LICENSE)
-
