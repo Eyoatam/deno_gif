@@ -36,10 +36,10 @@ export class Handler {
 
     encoder
       .audioBitrate(
-        options && options.audioBitrate ? options.audioBitrate : "192k"
+        options && options.audioBitrate ? options.audioBitrate : "192k",
       )
       .videoBitrate(
-        options && options.videoBitrate ? options.videoBitrate : "1M"
+        options && options.videoBitrate ? options.videoBitrate : "1M",
       )
       .addEventListener("progress", this.handleProgress)
       .width(options && options.width ? options.width : 480)
@@ -56,7 +56,7 @@ export class Handler {
     if (!event.fps && !event.frame) {
       console.log(
         colorsTs.green("[ffmpeg]: ") +
-          `time: ${event.outTimeMs}ms speed: ${event.speed}x`
+          `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
       );
     }
     if (event.done) {
@@ -64,7 +64,7 @@ export class Handler {
     } else {
       console.log(
         colorsTs.green("[ffmpeg]: ") +
-          `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
+          `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
       );
     }
   }
@@ -79,20 +79,20 @@ export class Handler {
     const splitOutput: Array<string> = output.split("");
     const splicedOutput: Array<string> = splitOutput.splice(
       2,
-      output.length - 2
+      output.length - 2,
     );
     if (splicedOutput[0] === ".") {
       throw new Error("Invalid path");
     }
     if (splicedOutput.includes(".")) {
       const error = new Error(
-        `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`
+        `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`,
       );
       throw error;
     }
     if (splitOutput[0] === "/") {
       const error = new Error(
-        `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`
+        `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`,
       );
       throw error;
     }
