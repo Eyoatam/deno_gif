@@ -12,9 +12,9 @@ const program = new commandTs.Command();
 
 program
   .name("gif")
-  .version("0.4.0")
+  .version("0.7.0")
   .description(
-    "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm",
+    "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm"
   )
   .option("-i, --input <input:string>", "input file")
   .option("-o, --output <output:string>", "output file")
@@ -37,7 +37,7 @@ program
 (() => {
   if (Deno.args.length < 1) {
     console.log(
-      "Usage: gif -i [inputfile] -o [outputfile] run again with --help for more help",
+      "Usage: gif -i [inputfile] -o [outputfile] run again with --help for more help"
     );
     Deno.exit();
   }
