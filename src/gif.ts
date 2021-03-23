@@ -3,10 +3,8 @@ import { colorsTs, ffmpegTs } from "../deps.ts";
 export interface Options {
   width: number;
   height: number;
-  mp3?: string;
-  mp4?: string;
-  avi?: string;
-  webm?: string;
+  videoBitrate?: string;
+  audioBitrate?: string;
 }
 
 export interface EncodingProgress {
@@ -29,19 +27,23 @@ export class Handler {
    *
    *  `height` - height of the video
    *
-   * @param input - The input file
-   * @param output - The output file
-   * @param format - The file format convert to
+   * @param {string} input - The input file
+   * @param {string} output - The output file
+   * @param {string} format - The file format convert to
    */
   convert(input: string, output: string, format: string, options?: Options) {
     const encoder = ffmpegTs.ffmpeg(input);
 
     encoder
-      .audioBitrate("192k")
-      .videoBitrate("1M")
+      .audioBitrate(
+        options && options.audioBitrate ? options.audioBitrate : "192k"
+      )
+      .videoBitrate(
+        options && options.videoBitrate ? options.videoBitrate : "1M"
+      )
       .addEventListener("progress", this.handleProgress)
-      .width(options ? options?.width : 480)
-      .height(options ? options?.height : 380)
+      .width(options && options.width ? options.width : 480)
+      .height(options && options.height ? options.height : 380)
       .output("./" + output + "." + format)
       .encode();
   }
@@ -54,7 +56,7 @@ export class Handler {
     if (!event.fps && !event.frame) {
       console.log(
         colorsTs.green("[ffmpeg]: ") +
-          `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+          `time: ${event.outTimeMs}ms speed: ${event.speed}x`
       );
     }
     if (event.done) {
@@ -62,7 +64,7 @@ export class Handler {
     } else {
       console.log(
         colorsTs.green("[ffmpeg]: ") +
-          `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+          `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`
       );
     }
   }
@@ -71,32 +73,36 @@ export class Handler {
    * validates output file name
    * by checking for invalid paths
    *
-   * @param output - output file
+   * @param {string} output - output file
    */
   validateOutput(output: string) {
     const splitOutput: Array<string> = output.split("");
     const splicedOutput: Array<string> = splitOutput.splice(
       2,
-      output.length - 2,
+      output.length - 2
     );
     if (splicedOutput[0] === ".") {
       throw new Error("Invalid path");
     }
     if (splicedOutput.includes(".")) {
       const error = new Error(
-        `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`,
+        `unexpected character '.' output file name must not contain a '.' or extension like '.mp4', '.gif'`
       );
       throw error;
     }
     if (splitOutput[0] === "/") {
       const error = new Error(
-        `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`,
+        `unexpected character '/' output file name must not contain a '/' or extension like '.mp4', '.gif'`
       );
       throw error;
     }
   }
 
-  /** Checks if input and output files exist  */
+  /**
+   *  Checks if input and output files exist
+   * @param {string} input
+   * @param {string} output
+   *  */
   checkForInputAndOutput(input: string, output: string) {
     if (!input) {
       const error = new Error("input file is required");
@@ -114,10 +120,10 @@ const HandlerClass = new Handler();
 
 /**
  * convert `input` video files to `gif` with the given `options`
- * @param input @type string
- * @param output @type string
- * @param width @default 480
- * @param height @default 380
+ * @param {string} input
+ * @param {string} output
+ * @param {number} width @default 480
+ * @param {number} height @default 380
  */
 export function gif(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -132,10 +138,10 @@ export function gif(input: string, output: string, options?: Options) {
 
 /**
  * convert `input` video files to `mp4` with the given `options`
- * @param input @type string
- * @param output @type string
- * @param width @default 480
- * @param height @default 380
+ * @param {string} input
+ * @param {string} output
+ * @param {number} width @default 480
+ * @param {number} height @default 380
  */
 export function mp4(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -150,8 +156,8 @@ export function mp4(input: string, output: string, options?: Options) {
 
 /**
  * convert `input` video files to `mp3` with the given `options`
- * @param input @type string
- * @param output @type string
+ * @param {string} input
+ * @param {string} output
  */
 export function mp3(input: string, output: string) {
   // check if input and output files exist
@@ -166,10 +172,10 @@ export function mp3(input: string, output: string) {
 
 /**
  * convert `input` video files to `avi` with the given `options`
- * @param input @type string
- * @param output @type string
- * @param width @default 480
- * @param height @default 380
+ * @param {string} input
+ * @param {string} output
+ * @param {number} width @default 480
+ * @param {number} height @default 380
  */
 export function avi(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -184,10 +190,10 @@ export function avi(input: string, output: string, options?: Options) {
 
 /**
  * convert `input` video files to `.webm` with the given `options`
- * @param input @type string
- * @param output @type string
- * @param width @default 480
- * @param height @default 380
+ * @param {string} input
+ * @param {string} output
+ * @param {number} width @default 480
+ * @param {number} height @default 380
  */
 export function webm(input: string, output: string, options?: Options) {
   // check if input and output files exist
