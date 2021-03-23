@@ -1,2 +1,2 @@
-export { avi, gif, mp3, mp4, webm } from "./src/gif.ts";
-export * from "./src/utils.ts";
+export * from "./src/gif.ts";
+export * from "./cli.ts";
