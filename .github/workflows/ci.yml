@@ -20,14 +20,13 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v2
 
-      - name: Install Deno (Unix)
+      - name: Install Deno (Unix) and check formatting
         if: |
           !startsWith(matrix.os, 'windows')
         run: |-
           curl -fsSL https://deno.land/x/install/install.sh | sh
           echo "$HOME/.deno/bin" >> $GITHUB_PATH
-      - name: check formatting on mac and ubuntu
-        run: deno fmt --check
+          deno fmt --check
       - name: Install Deno (Windows)
         if: startsWith(matrix.os, 'windows')
         run: |-
