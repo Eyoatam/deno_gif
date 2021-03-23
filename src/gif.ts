@@ -56,15 +56,15 @@ export class Handler {
     if (!event.fps && !event.frame) {
       console.log(
         colorsTs.green("[ffmpeg]: ") +
-          `time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+          `time: ${event.outTimeMs}ms  speed: ${event.speed}x`,
       );
     }
     if (event.done) {
-      console.log(`✨Done✨ in ${event.outTimeMs} ms`);
+      console.log(`✨Done✨ in ${event.outTimeMs}ms`);
     } else {
       console.log(
         colorsTs.green("[ffmpeg]: ") +
-          `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms speed: ${event.speed}x`,
+          `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms  speed: ${event.speed}x`,
       );
     }
   }
@@ -128,7 +128,6 @@ const HandlerClass = new Handler();
 export function gif(input: string, output: string, options?: Options) {
   // check if input and output files exist
   HandlerClass.checkForInputAndOutput(input, output);
-
   // validate output file
   HandlerClass.validateOutput(output);
 

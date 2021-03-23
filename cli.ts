@@ -12,9 +12,9 @@ const program = new commandTs.Command();
 
 program
   .name("gif")
-  .version("0.7.0")
+  .version("0.8.0")
   .description(
-    "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm"
+    "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm",
   )
   .option("-i, --input <input:string>", "input file")
   .option("-o, --output <output:string>", "output file")
@@ -37,14 +37,14 @@ program
 (() => {
   if (Deno.args.length < 1) {
     console.log(
-      "Usage: gif -i [inputfile] -o [outputfile] run again with --help for more help"
+      "Usage: gif -i [inputfile] -o [outputfile] run again with --help for more help",
     );
     Deno.exit();
   }
 })();
 
 // deno-lint-ignore no-explicit-any
-export function createGif(): commandTs.IAction<any, any> {
+function createGif(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -53,7 +53,7 @@ export function createGif(): commandTs.IAction<any, any> {
 }
 
 // deno-lint-ignore no-explicit-any
-export function createMp3(): commandTs.IAction<any, any> {
+function createMp3(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -62,7 +62,7 @@ export function createMp3(): commandTs.IAction<any, any> {
 }
 
 // deno-lint-ignore no-explicit-any
-export function createWebm(): commandTs.IAction<any, any> {
+function createWebm(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -70,7 +70,7 @@ export function createWebm(): commandTs.IAction<any, any> {
   };
 }
 // deno-lint-ignore no-explicit-any
-export function createMp4(): commandTs.IAction<any, any> {
+function createMp4(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -79,7 +79,7 @@ export function createMp4(): commandTs.IAction<any, any> {
 }
 
 // deno-lint-ignore no-explicit-any
-export function createAvi(): commandTs.IAction<any, any> {
+function createAvi(): commandTs.IAction<any, any> {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
