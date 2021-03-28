@@ -10,6 +10,12 @@ export interface CLiOptions {
 
 const program = new commandTs.Command();
 
+if (Deno.args.length < 1) {
+  console.log(`No arguments provided!
+    Usage: gif -i [inputfile] -o [outputfile] run again with --help for more help`);
+  Deno.exit();
+}
+
 program
   .name("gif")
   .version("0.8.0")
@@ -33,15 +39,6 @@ program
   .arguments("[inputfile:string] [outputfile: string]")
   .action(createGif())
   .parse(Deno.args);
-
-(() => {
-  if (Deno.args.length < 1) {
-    console.log(
-      "Usage: gif -i [inputfile] -o [outputfile] run again with --help for more help",
-    );
-    Deno.exit();
-  }
-})();
 
 // deno-lint-ignore no-explicit-any
 function createGif(): commandTs.IAction<any, any> {
