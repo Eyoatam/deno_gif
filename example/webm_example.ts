@@ -1,3 +1,8 @@
 import { webm } from "../mod.ts";
 
-webm("./testdata/video.mp4", "output");
+const opts = {
+  width: 500,
+  height: 500,
+};
+
+webm("./testdata/video.mp4", "output", opts);
