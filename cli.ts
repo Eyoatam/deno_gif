@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run --allow-net --allow-env --allow-run
 
 import { commandTs } from "./deps.ts";
-import { avi, gif, mp3, mp4, webm, mov } from "./mod.ts";
+import { avi, gif, mov, mp3, mp4, webm } from "./mod.ts";
 
 export interface CLiOptions {
   input: string;
@@ -20,7 +20,7 @@ program
   .name("gif")
   .version("0.8.0")
   .description(
-    "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm"
+    "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm",
   )
   .option("-i, --input <input:string>", "input file")
   .option("-o, --output <output:string>", "output file")
