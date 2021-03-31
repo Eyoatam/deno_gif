@@ -204,3 +204,14 @@ export function webm(input: string, output: string, options?: Options) {
   // convert to webm
   HandlerClass.convert(input, output, "webm", options);
 }
+
+export function mov(input: string, output: string, options?: Options) {
+  // check if input and output files exist
+  HandlerClass.checkForInputAndOutput(input, output);
+
+  // validate output file
+  HandlerClass.validateOutput(output);
+
+  // convert to webm
+  HandlerClass.convert(input, output, "mov", options);
+}

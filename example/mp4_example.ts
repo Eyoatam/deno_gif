@@ -1,3 +1,8 @@
 import { mp4 } from "../mod.ts";
 
-mp4("./testdata/video.mp4", "output");
+const opts = {
+  width: 500,
+  height: 450,
+};
+
+mp4("./testdata/video.mp4", "output", opts);
