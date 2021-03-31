@@ -136,8 +136,8 @@ export function gif(input: string, output: string, options?: Options) {
 
 /**
  * convert `input` video files to `gif` with the given `options`
- * @param {string} input
- * @param {string} output
+ * @param {string} input - input file
+ * @param {string} output - iutput file
  * @param {Options} options
  */
 export function mp4(input: string, output: string, options?: Options) {
@@ -153,8 +153,8 @@ export function mp4(input: string, output: string, options?: Options) {
 
 /**
  * convert `input` video files to `mp3` with the given `options`
- * @param {string} input
- * @param {string} output
+ * @param {string} input - input file
+ * @param {string} output - output file
  */
 export function mp3(input: string, output: string) {
   // check if input and output files exist
