@@ -191,6 +191,12 @@ webm(
 );
 ```
 
+> or using the cli
+
+```bash
+gif --webm -i https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4 -o output
+```
+
 > Example of converting video to mov with options
 
 ```ts
