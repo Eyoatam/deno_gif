@@ -99,7 +99,7 @@ export class Handler {
   }
 
   /**
-   *  Checks if input and output files exist
+   * Checks if input and output files exist
    * @param {string} input
    * @param {string} output
    *  */
@@ -122,8 +122,7 @@ const HandlerClass = new Handler();
  * convert `input` video files to `gif` with the given `options`
  * @param {string} input
  * @param {string} output
- * @param {number} width @default 480
- * @param {number} height @default 380
+ * @param {Options} options
  */
 export function gif(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -136,11 +135,10 @@ export function gif(input: string, output: string, options?: Options) {
 }
 
 /**
- * convert `input` video files to `mp4` with the given `options`
+ * convert `input` video files to `gif` with the given `options`
  * @param {string} input
  * @param {string} output
- * @param {number} width @default 480
- * @param {number} height @default 380
+ * @param {Options} options
  */
 export function mp4(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -170,11 +168,10 @@ export function mp3(input: string, output: string) {
 }
 
 /**
- * convert `input` video files to `avi` with the given `options`
+ * convert `input` video files to `gif` with the given `options`
  * @param {string} input
  * @param {string} output
- * @param {number} width @default 480
- * @param {number} height @default 380
+ * @param {Options} options
  */
 export function avi(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -188,11 +185,10 @@ export function avi(input: string, output: string, options?: Options) {
 }
 
 /**
- * convert `input` video files to `.webm` with the given `options`
+ * convert `input` video files to `gif` with the given `options`
  * @param {string} input
  * @param {string} output
- * @param {number} width @default 480
- * @param {number} height @default 380
+ * @param {Options} options
  */
 export function webm(input: string, output: string, options?: Options) {
   // check if input and output files exist
@@ -206,11 +202,10 @@ export function webm(input: string, output: string, options?: Options) {
 }
 
 /**
- * convert `input` video files to `.webm` with the given `options`
+ * convert `input` video files to `gif` with the given `options`
  * @param {string} input
  * @param {string} output
- * @param {number} width @default 480
- * @param {number} height @default 380
+ * @param {Options} options
  */
 export function mov(input: string, output: string, options?: Options) {
   // check if input and output files exist
