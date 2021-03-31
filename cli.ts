@@ -18,7 +18,7 @@ if (Deno.args.length < 1) {
 
 program
   .name("gif")
-  .version("0.8.0")
+  .version("1.0.0")
   .description(
     "A command line tool for converting videos to other file formats like gifs, avi, mp4 and webm",
   )
