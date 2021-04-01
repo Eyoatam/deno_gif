@@ -1,10 +1,10 @@
-export interface Options {
+interface Options {
   width: number;
   height: number;
   videoBitrate?: string;
   audioBitrate?: string;
 }
-export interface EncodingProgress {
+interface EncodingProgress {
   done: boolean;
   outTimeMs: number;
   frame: number;
@@ -12,7 +12,7 @@ export interface EncodingProgress {
   speed: number;
   progress: number;
 }
-export declare class Handler {
+declare class Handler {
   /**
    * converts videos to the given formats with optional `width` and `height` options
    *
@@ -55,58 +55,38 @@ export declare class Handler {
  * @param output - output file name
  * @param options - video options like width and height
  */
-export declare function gif(
-  input: string,
-  output: string,
-  options?: Options,
-): void;
+declare function gif(input: string, output: string, options?: Options): void;
 /**
  * convert `input` video files to `gif` with the given `options`
  * @param input - input file name
  * @param output - output file name
  * @param options - video options like width and height
  */
-export declare function mp4(
-  input: string,
-  output: string,
-  options?: Options,
-): void;
+declare function mp4(input: string, output: string, options?: Options): void;
 /**
  * convert `input` video files to `gif` with the given `options`
  * @param input - input file name
  * @param output - output file name
  */
-export declare function mp3(input: string, output: string): void;
-/**
- * convert `input` video files to `gif` with the given `options`
- * @param input - input file name
- * @param output - output file name
- * @param options - video options like width and height
- */
-export declare function avi(
-  input: string,
-  output: string,
-  options?: Options,
-): void;
+declare function mp3(input: string, output: string): void;
 /**
  * convert `input` video files to `gif` with the given `options`
  * @param input - input file name
  * @param output - output file name
  * @param options - video options like width and height
  */
-export declare function webm(
-  input: string,
-  output: string,
-  options?: Options,
-): void;
+declare function avi(input: string, output: string, options?: Options): void;
 /**
  * convert `input` video files to `gif` with the given `options`
  * @param input - input file name
  * @param output - output file name
  * @param options - video options like width and height
  */
-export declare function mov(
-  input: string,
-  output: string,
-  options?: Options,
-): void;
+declare function webm(input: string, output: string, options?: Options): void;
+/**
+ * convert `input` video files to `gif` with the given `options`
+ * @param input - input file name
+ * @param output - output file name
+ * @param options - video options like width and height
+ */
+declare function mov(input: string, output: string, options?: Options): void;
