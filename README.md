@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Fdeno_gif%2Fmod.ts">
 <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Fdeno_gif%2Fmod.ts">
 <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-<img src="https://img.shields.io/badge/deno-^1.5.0-informational?logo=deno">
+<img src="https://img.shields.io/badge/deno-^1.8.0-informational?logo=deno">
 <a href="https://doc.deno.land/https/deno.land/x/deno_gif/typedef/gif.d.ts">
   <img src="https://doc.deno.land/badge.svg">
 </a>
@@ -16,7 +16,7 @@
 ## Installation
 
 ```bash
-deno install  --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@1.0.0/cli.ts
+deno install  --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@1.2/cli.ts
 ```
 
 This module Requires `ffmpeg`:
@@ -57,7 +57,7 @@ const options = {
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
@@ -68,7 +68,7 @@ import { gif } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 gif(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -85,7 +85,7 @@ import { mp3 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mp3(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -108,7 +108,7 @@ const options = {
 mp4(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
@@ -119,7 +119,7 @@ import { mp4 } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mp4(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -142,7 +142,7 @@ const options = {
 avi(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
@@ -153,7 +153,7 @@ import { avi } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 avi(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -176,7 +176,7 @@ const options = {
 webm(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
@@ -187,7 +187,7 @@ import { webm } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 webm(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
@@ -210,7 +210,7 @@ const options = {
 mov(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
   "output",
-  options,
+  options
 );
 ```
 
@@ -221,7 +221,7 @@ import { mov } from "https://deno.land/x/deno_gif@<version>/mod.ts";
 
 mov(
   "https://github.com/Eyoatam/Gif.ts/tree/master/example/testdata/video.mp4",
-  "output",
+  "output"
 );
 ```
 
