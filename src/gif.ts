@@ -1,4 +1,4 @@
-import { colorsTs, ffmpegTs } from "../deps.ts";
+import { ffmpeg, green } from "../deps.ts";
 
 export interface Options {
   width: number;
@@ -36,7 +36,7 @@ export function convert(
   format: string,
   options?: Options,
 ) {
-  const encoder = ffmpegTs.ffmpeg(input);
+  const encoder = ffmpeg(input);
 
   encoder
     .audioBitrate(
@@ -55,11 +55,11 @@ export function convert(
 /** Progress Handler */
 export function handleProgress(event: EncodingProgress) {
   if (!event.frame && !event.outTimeMs && !event.fps && !event.speed) {
-    console.log(colorsTs.green("[ffmpeg]: ") + `progress ${event.progress}`);
+    console.log(green("[ffmpeg]: ") + `progress ${event.progress}`);
   }
   if (!event.fps && !event.frame) {
     console.log(
-      colorsTs.green("[ffmpeg]: ") +
+      green("[ffmpeg]: ") +
         `time: ${event.outTimeMs}ms  speed: ${event.speed}x`,
     );
   }
@@ -67,7 +67,7 @@ export function handleProgress(event: EncodingProgress) {
     console.log(`✨Done✨ in ${event.outTimeMs}ms`);
   } else {
     console.log(
-      colorsTs.green("[ffmpeg]: ") +
+      green("[ffmpeg]: ") +
         `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms  speed: ${event.speed}x`,
     );
   }

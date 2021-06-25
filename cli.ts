@@ -1,6 +1,6 @@
 #!/usr/bin/env -S deno run --allow-net --allow-env --allow-run
 
-import { commandTs } from "./deps.ts";
+import { Command } from "./deps.ts";
 import { avi, gif, mov, mp3, mp4, webm } from "./mod.ts";
 
 export interface CLiOptions {
@@ -8,7 +8,7 @@ export interface CLiOptions {
   output: string;
 }
 
-const program = new commandTs.Command();
+const program = new Command();
 
 if (Deno.args.length < 1) {
   console.log(`No arguments provided!
@@ -43,8 +43,7 @@ program
   .action(createGif())
   .parse(Deno.args);
 
-// deno-lint-ignore no-explicit-any
-function createGif(): commandTs.IAction<any, any> {
+function createGif() {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -52,8 +51,7 @@ function createGif(): commandTs.IAction<any, any> {
   };
 }
 
-// deno-lint-ignore no-explicit-any
-function createMp3(): commandTs.IAction<any, any> {
+function createMp3() {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -61,16 +59,14 @@ function createMp3(): commandTs.IAction<any, any> {
   };
 }
 
-// deno-lint-ignore no-explicit-any
-function createWebm(): commandTs.IAction<any, any> {
+function createWebm() {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
     webm(inputfile, outputfile);
   };
 }
-// deno-lint-ignore no-explicit-any
-function createMp4(): commandTs.IAction<any, any> {
+function createMp4() {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -78,8 +74,7 @@ function createMp4(): commandTs.IAction<any, any> {
   };
 }
 
-// deno-lint-ignore no-explicit-any
-function createAvi(): commandTs.IAction<any, any> {
+function createAvi() {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
@@ -87,8 +82,7 @@ function createAvi(): commandTs.IAction<any, any> {
   };
 }
 
-// deno-lint-ignore no-explicit-any
-function createMov(): commandTs.IAction<any, any> {
+function createMov() {
   return (options: CLiOptions) => {
     const inputfile = options.input;
     const outputfile = options.output;
