@@ -54,21 +54,6 @@ export function convert(
 
 /** Progress Handler */
 export function handleProgress(event: EncodingProgress) {
-  // if (event.done) {
-  //   console.log(`✨Done✨ in ${event.outTimeMs.toFixed(1)}ms`);
-  // } else if (!(event.frame && event.outTimeMs && event.fps && event.speed)) {
-  //   console.log(colorsTs.green("[ffmpeg]: ") + `progress ${event.progress}`);
-  // } else if (!(event.fps && event.frame)) {
-  //   console.log(
-  //     colorsTs.green("[ffmpeg]: ") +
-  //       `time: ${event.outTimeMs}ms  speed: ${event.speed}x`,
-  //   );
-  // } else {
-  //   console.log(
-  //     colorsTs.green("[ffmpeg]: ") +
-  //       `frame: ${event.frame} fps: ${event.fps} time: ${event.outTimeMs}ms  speed: ${event.speed}x`,
-  //   );
-  // }
   if (!event.frame && !event.outTimeMs && !event.fps && !event.speed) {
     console.log(colorsTs.green("[ffmpeg]: ") + `progress ${event.progress}`);
   }
