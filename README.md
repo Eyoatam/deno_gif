@@ -2,10 +2,9 @@
 
 <p align="center">
 <img src="https://github.com/Eyoatam/Gif.ts/workflows/ci/badge.svg">
-<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2Fdeno_gif%2Fmod.ts">
 <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Fdeno_gif%2Fmod.ts">
 <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-<img src="https://img.shields.io/badge/deno-^1.8.0-informational?logo=deno">
+<img src="https://img.shields.io/badge/deno-^1.11.0-informational?logo=deno">
 <a href="https://doc.deno.land/https/deno.land/x/deno_gif/typedef/gif.d.ts">
   <img src="https://doc.deno.land/badge.svg">
 </a>
@@ -16,7 +15,7 @@
 ## Installation
 
 ```bash
-deno install  --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@1.3/cli.ts
+deno install  --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@1.4/cli.ts
 ```
 
 This module Requires `ffmpeg`:
