@@ -15,7 +15,7 @@
 ## Installation
 
 ```bash
-deno install  --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@1.4/cli.ts
+deno install  --allow-read --allow-write --allow-run -f -n gif https://deno.land/x/deno_gif@1.5/cli.ts
 ```
 
 This module Requires `ffmpeg`:
