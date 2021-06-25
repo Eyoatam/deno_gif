@@ -12,8 +12,7 @@ interface EncodingProgress {
   speed: number;
   progress: number;
 }
-declare class Handler {
-  /**
+/**
    * converts videos to the given formats with optional `width` and `height` options
    *
    *
@@ -27,28 +26,27 @@ declare class Handler {
    * @param output - The output file
    * @param format - The file format convert to
    */
-  convert(
-    input: string,
-    output: string,
-    format: string,
-    options?: Options,
-  ): void;
-  /** Progress Handler */
-  handleProgress(event: EncodingProgress): void;
-  /**
+declare function convert(
+  input: string,
+  output: string,
+  format: string,
+  options?: Options,
+): void;
+/** Progress Handler */
+declare function handleProgress(event: EncodingProgress): void;
+/**
    * validates output file name
    * by checking for invalid paths
    *
    * @param output - output file
    */
-  validateOutput(output: string): void;
-  /**
+declare function validateOutput(output: string): void;
+/**
    * Checks if input and output files exist
    * @param input
    * @param output
    *  */
-  checkForInputAndOutput(input: string, output: string): void;
-}
+declare function checkForInputAndOutput(input: string, output: string): void;
 /**
  * convert `input` video files to `gif` with the given `options`
  * @param input - input file name
